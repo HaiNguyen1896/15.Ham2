@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    let arr=nhapMang();
+    document.write(`Mảng sau khi đảo ngược là ${reverseArray(arr)}<br>`)
+    function nhapMang(){
+        let arrIntNumber = [];
+        let input;
+        do {
+            input = prompt('Nhập số', 'Nhập out để thoát nhập phần tử');
+            if (input === 'out') {
+                break;
+            }
+            arrIntNumber.push(input);
+        } while (input !== 'out');
+        document.write(`Mảng truớc khi đảo ngược là ${arrIntNumber}<br>`)
+        return arrIntNumber;
+    }
+    function reverseArray(arr) {
+        arr.reverse();
+        return arr;
+    }
+</script>

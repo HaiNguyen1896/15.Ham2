@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    let myArr = nhapMang();
+    let anyNumber = prompt('Nhập số bất kỳ để kiểm tra có trong mảng');
+    let ketqua = checkNumberInArray(anyNumber, myArr)
+    if (ketqua === -1) {
+        document.write(`Không có giá trị ${anyNumber} nằm trong mảng, trả về ${ketqua}`);
+    } else {
+        document.write(`Có giá trị ${anyNumber} nằm trong mảng, xuất hiện ${ketqua} lần`);
+    }
+
+    function nhapMang() {
+        let arrIntNumber = [];
+        let input;
+        do {
+            input = prompt('Nhập số', 'Nhập out để thoát nhập phần tử');
+            if (input === 'out') {
+                break;
+            }
+            arrIntNumber.push(input);
+        } while (input !== 'out');
+        document.write(`Mảng mảng bạn nhập là ${arrIntNumber}<br>`)
+        return arrIntNumber;
+    }
+
+    function checkNumberInArray(number, arr) {
+        let count = 0;
+        let check = arr.indexOf(number, 0);
+        if (check === -1) {
+            return -1;
+        } else {
+            for (let i = 0; i < arr.length; i++) {
+                if (number === arr[i]) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+</script>

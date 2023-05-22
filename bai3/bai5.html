@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="starInput()">
+
+</body>
+</html>
+<script>
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function starInput(){
+        let starName = prompt("Nhập tên ngôi sao bạn muốn tìm");
+        findStars(starName);
+    }
+
+    function findStars(star) {
+        let starIndex = stars.indexOf(star, 0)
+        if (starIndex === -1) {
+            alert("Không có ngôi sao nào giống tên ngôi sao bạn nhập")
+            system.exit(0);
+        } else {
+            alert(`Tên ngôi sao bạn nhập nằm ở vị trí thứ ${starIndex} có tên là ${stars[starIndex]}`);
+            alert(`Chòm sao của ngôi sao là ${constellation[starIndex]}`)
+        }
+    }
+</script>

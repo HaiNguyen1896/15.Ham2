@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let radious = parseFloat(prompt(`Nhập bán kính hình tròn`));
+    sHinhtron = Math.round((circleArea(radious)) * 100) / 100;
+    cvHinhtron = Math.round((circumference(radious)) * 100) / 100;
+    document.write(`Diện tích hình tròn = ${sHinhtron}, chu vi hình tròn = ${cvHinhtron}`);
+
+    function circleArea(r) {
+        return r * r * Math.PI;
+    }
+
+    function circumference(r) {
+        return 2 * r * Math.PI;
+    }
+</script>

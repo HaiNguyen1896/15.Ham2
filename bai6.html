@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let word = prompt('Nhập từ cần kiểm tra');
+    let check = checkPalindrome(word);
+    if (check === true) {
+        alert(`${word} là một từ đối xứng`)
+    } else {
+        alert(`${word} không phải là một từ đối xứng`)
+    }
+
+    function checkPalindrome(checkedWord) {
+        if (checkedWord[0] === checkedWord[checkedWord.length - 1]) {
+            if (checkedWord.length < 2) {
+                return true
+            } else {
+                checkedWord = checkedWord.substring(1, checkedWord.length - 1)
+                console.log(checkedWord);
+                return checkPalindrome(checkedWord);
+            }
+        } else {
+            return false;
+        }
+    }
+</script>

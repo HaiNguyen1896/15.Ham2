@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    let ketqua = minIntegers();
+    document.write(`Số bé nhất trong 3 số là số ${ketqua}`);
+    function minIntegers() {
+        let intNumber1 = parseInt(prompt(`Nhập vào số nguyên đầu tiên`));
+        let intNumber2 = parseInt(prompt(`Nhập vào số nguyên thứ hai`));
+        let intNumber3 = parseInt(prompt(`Nhập vào số nguyên thứ ba`));
+        if (intNumber1 > intNumber2) {
+            return intNumber2 > intNumber3 ? intNumber3 : intNumber2;
+        } else {
+            return intNumber1 > intNumber3 ? intNumber3 : intNumber1;
+        }
+
+    }
+</script>

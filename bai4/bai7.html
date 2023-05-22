@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arrSwap = [];
+    let a = parseInt(prompt(`Nhập số nguyên`));
+    let b = parseInt(prompt(`Nhập số nguyên`));
+    document.write(`Giá trị 2 số trước khi đổi chỗ là ${a} và ${b}<br>`);
+    swap(a, b);
+    document.write(`Giá trị 2 số sau khi đổi chỗ là ${arrSwap[0]} và ${arrSwap[1]}`);
+
+    function swap(number1, number2) {
+        let temp;
+        temp = number1;
+        number1 = number2;
+        number2 = temp;
+        arrSwap.push(number1, number2);
+        return arrSwap;
+    }
+</script>

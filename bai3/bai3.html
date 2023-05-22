@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+
+<script>
+    let firstNumber = parseFloat(prompt("Nhập vào tham số thứ nhất"));
+    let secondNumber = parseFloat(prompt("Nhập vào tham số thứ hai"));
+    let total = checkNumberReturnAlertOrTotal(firstNumber, secondNumber);
+    alert(`Tổng 2 số a + b = ${total}`);
+    function checkNumberReturnAlertOrTotal(a, b) {
+        if (a > b) {
+            alert(`Tham số nhứ nhất lớn hơn tham số thứ hai`);
+            system.exit(0);
+        } else {
+            return a + b;
+        }
+    }
+</script>

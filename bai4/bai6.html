@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let inputSo = parseInt(prompt(`Nhập vào số nguyên dương`, `Nhập số`));
+    if (soNguyenDuong(inputSo) === true) {
+        alert(`${inputSo} Là số nguyên dương`);
+    } else {
+        alert(`${inputSo} không là số nguyên dương`);
+    }
+
+    function soNguyenDuong(so) {
+        if (so === 0 || so < 0) {
+            return false;
+        } else {
+            return true
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>Chuyển đổi <input type="number" id="inputFeet" oninput="feetTransfer(value)" placeholder="Nhập giá trị Feet"> Feet =<span id="meterResult"></span>&nbsp meter</p>
+<p>Chuyển đổi <input type="number" id="inputMeter" oninput="meterTransfer(value)" placeholder="Nhập giá trị Meter">Meter =<span id="feetResult"></span>&nbsp feet</p>
+</body>
+</html>
+
+<script>
+    function feetTransfer(feetValue) {
+        let meter;
+        meter = 0.305 * feetValue;
+        document.getElementById("meterResult").innerHTML = meter;
+    }
+
+    function meterTransfer(meterValue) {
+        let feet;
+        feet = 3.279 * meterValue;
+        document.getElementById("feetResult").innerHTML = feet;
+    }
+</script>
